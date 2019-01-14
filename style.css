@@ -4,7 +4,7 @@ Theme URI: https://wordpress.org/themes/twentysixteen/
 Author: the WordPress team
 Author URI: https://wordpress.org/
 Description: Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere.
-Version: 1.7
+Version: 1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
@@ -1569,6 +1569,8 @@ blockquote:after,
 
 .site-header {
 	padding: 2.625em 7.6923%;
+	background: url(/wp-content/uploads/2018/07/minecraft-grass-block-wallpaper-2.jpg);
+	background-size:cover;
 }
 
 .site-header-main {
@@ -1609,12 +1611,12 @@ blockquote:after,
 }
 
 .site-branding .site-title a {
-	color: #1a1a1a;
+	color: #fff;
 }
 
 .site-branding .site-title a:hover,
 .site-branding .site-title a:focus {
-	color: #007acc;
+	text-decoration: underline;
 }
 
 .wp-custom-logo .site-title {
@@ -1953,9 +1955,7 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .author-avatar .avatar {
 	float: left;
-	height: 42px;
 	margin: 0 1.75em 1.75em 0;
-	width: 42px;
 }
 
 .author-description > :last-child {
@@ -2014,9 +2014,7 @@ body:not(.search-results) .entry-summary > :last-child,
 }
 
 .entry-footer .avatar {
-	height: 21px;
 	margin: -0.1538461538em 0.5384615385em 0 0;
-	width: 21px;
 }
 
 .sticky-post {
@@ -2041,7 +2039,7 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .sticky .posted-on,
 .byline {
-	display: none;
+	/*display: none;*/
 }
 
 .single .byline,
@@ -2232,10 +2230,8 @@ body.search-no-results .page-header {
 
 .comment-author .avatar {
 	float: left;
-	height: 28px;
 	margin-right: 0.875em;
 	position: relative;
-	width: 28px;
 }
 
 .bypostauthor > article .fn:after {
@@ -2446,11 +2442,11 @@ body.search-no-results .page-header {
 }
 
 .site-footer .site-title:after {
-	content: "\002f";
+	/*content: "\002f";
 	display: inline-block;
 	font-family: Montserrat, sans-serif;
 	opacity: 0.7;
-	padding: 0 0.307692308em 0 0.538461538em;
+	padding: 0 0.307692308em 0 0.538461538em;*/
 }
 
 .site-footer span[role=separator] {
@@ -2469,7 +2465,7 @@ body.search-no-results .page-header {
  */
 
 .site .avatar {
-	border-radius: 50%;
+	/*border-radius: 50%;*/
 }
 
 .entry-content .wp-smiley,
@@ -2758,14 +2754,14 @@ p > video {
 @media screen and (min-width: 44.375em) {
 	body:not(.custom-background-image):before,
 	body:not(.custom-background-image):after {
-		background: inherit;
+		/*background: inherit;
 		content: "";
 		display: block;
 		height: 21px;
 		left: 0;
 		position: fixed;
 		width: 100%;
-		z-index: 99;
+		z-index: 99;*/
 	}
 
 	body:not(.custom-background-image):before {
@@ -2781,7 +2777,10 @@ p > video {
 	}
 
 	.site {
-		margin: 21px;
+		max-width: 1320px;
+		margin: auto;
+		margin-top:21px;
+		margin-bottom: 21px;
 	}
 
 	.site-main {
@@ -2934,10 +2933,8 @@ p > video {
 	}
 
 	.comment-author .avatar {
-		height: 42px;
 		position: relative;
 		top: 0.25em;
-		width: 42px;
 	}
 
 	.comment-list .children > li {
@@ -3133,7 +3130,7 @@ p > video {
 	}
 
 	.site-content {
-		padding: 0 4.5455%;
+		padding: 4.5455%;
 	}
 
 	.content-area {
@@ -3601,6 +3598,7 @@ p > video {
 		float: left;
 		margin-top: 0.1538461538em;
 		width: 21.42857143%;
+		text-align: center;
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-footer > span:not(:last-child):after {
@@ -3627,8 +3625,8 @@ p > video {
 	body:not(.search-results) article:not(.type-page) .entry-footer .avatar {
 		display: block;
 		height: auto;
-		margin: 0 0 0.5384615385em;
-		width: 49px;
+		margin: 0px auto;
+		margin-bottom: 0.5384615385em;
 	}
 
 	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content {
